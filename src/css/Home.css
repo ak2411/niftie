@@ -1,0 +1,39 @@
+.home {
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+.hero-img {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+      
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+      
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .hero-text {
+    width: 70%;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+    display: flex;
+    vertical-align: middle;
+    flex-direction: column;
+    color: white;
+}
+
+.custom-button {
+    background-color: #D9F951 !important;
+    color: black!important;
+    border-radius: 20px!important;
+}

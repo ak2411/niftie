@@ -1,0 +1,30 @@
+.game-home {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.game-hero-text-container {
+    display: flex;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
+    flex-direction: column;
+    width: 50%;
+    /* height: 100%; */
+}
+
+.game-hero-image {
+    display: flex;
+    width: 50%;
+}
+
+.game-hero-img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.custom-button {
+
+}

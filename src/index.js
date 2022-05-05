@@ -2,16 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import GameIndex from './GameIndex';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, HashRouter } from 'react-router-dom';
+import { BrowserRouter, Routes ,Route } from 'react-router-dom';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
         <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <App/>
+        <Routes>
+      {/* <Route path="/message" exact element={<Message/>} /> */}
+      {/* <Route path="/photos" exact element={<Photos/>} /> */}
+      <Route path="/" element={<App/>} />
+      <Route path="/DIG" element={<GameIndex/>} />
+    </Routes>
    </BrowserRouter>
   </React.StrictMode>,
     document.getElementById('root')
