@@ -18,11 +18,12 @@
 .game-hero-image {
     display: flex;
     width: 50%;
+    overflow: hidden;
 }
 
 .game-hero-img {
     width: 100%;
-    object-fit: contain;
+    height: auto;
 }
 
 .custom-button {
