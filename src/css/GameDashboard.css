@@ -4,3 +4,15 @@
     padding-top: 1rem;
     margin: 50px;
 }
+
+.card-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* gap: 10px; */
+
+    /* flex-direction: column; */
+}
+.card-subtitle {
+    color: #808080;
+}
