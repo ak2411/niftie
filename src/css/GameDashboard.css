@@ -1,3 +1,8 @@
+.overarching-card-grid {
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
 .game-dashboard {
     display: flex;
     flex-direction: column;
@@ -9,10 +14,61 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    /* gap: 10px; */
+    gap: 10px;
 
     /* flex-direction: column; */
 }
+
+.left-cards {
+    flex-grow: 5;
+}
+
+.right-cards {
+    /* flex-grow: 1; */
+}
+
 .card-subtitle {
+    color: #808080;
+    margin-bottom: 0.5em !important;
+}
+
+.card-footer {
+    background-color: #ffffff00 !important;
+    border-top: 0 !important;
+}
+
+.card-item-row {
+    display: flex;
+}
+
+.user-img {
+    /* margin: 3px; */
+}
+
+.leaderboard {
+    gap: 5px;
+}
+
+.leaderboard-text {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    min-width: 150px;
+    /* justify-content: flex-center; */
+}
+
+.marketplace-img {
+    width: 100%;
+    margin:0px;
+}
+
+#exclusive-item-drop-text {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    justify-content: flex-end;
+}
+
+#exclusive-item-drop-text-grey {
     color: #808080;
 }
