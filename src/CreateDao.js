@@ -1,5 +1,5 @@
 import {Image, Button, Container, ProgressBar, Card} from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import hero from './images/game-bg.png';
 import './css/GameDashboard.css';
 import { InjectedConnector } from '@web3-react/injected-connector';
@@ -9,23 +9,9 @@ import { useWeb3React } from '@web3-react/core';
 import { ethers } from 'ethers';
 import { abi } from "./abi";
 
-function Success() {
-    let navigate = useNavigate(); 
-    const handleClick = () =>{ 
-        navigate(process.env.PUBLIC_URL + "/DIG/DigFighters")
-    }
-    return(<div>
-        <h2>You have created a DAO for DIG game!</h2>
-        Click open to navigate to your DAO.
-        <Button className="custom-button" onClick={handleClick}>Open</Button>
-    </div>);
-}
-
-
 
 function CreateDao(pageProp) {
-    const [createdDAO, setCreatedDAO] = useState(false);
-
+  
     const {
       active,
       activate,
@@ -51,7 +37,7 @@ function CreateDao(pageProp) {
     
     return (
         <div className="game-dashboard">
-            {(pageProp.hasMetamask && active) ? (createdDAO) ? (<Success />) : (
+            {(pageProp.hasMetamask && active) ? (
                 <Button variant="primary" size="lg" className="custom-button" onClick={() => execute()}>
                     Create DAO
                 </Button>
@@ -61,3 +47,4 @@ function CreateDao(pageProp) {
   }
   
   export default CreateDao;
+
