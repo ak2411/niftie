@@ -1,8 +1,8 @@
 {
   "name": "niftie",
+  "homepage": "https://niftie.netlify.app/",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://niftie.netlify.app/",
   "dependencies": {
     "@ethersproject/providers": "^5.6.5",
     "@testing-library/jest-dom": "^5.16.4",
