@@ -8,6 +8,7 @@ import './css/GameIndex.css';
 import GameHome from './GameHome';
 import GameHeader from './GameHeader';
 import GameDashboard from './GameDashboard';
+import CreateDao from './CreateDao';
 
 
 function GameIndex() {
@@ -17,6 +18,7 @@ function GameIndex() {
         <Routes>
             <Route path={`/DigFighters`} element={<GameDashboard/>} />
             <Route path={`/`} element={<GameHome/>} />
+            <Route path={`/create-dao`} element={<CreateDao/>} />
         </Routes>
         </>
     );
