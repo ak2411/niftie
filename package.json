@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@ethersproject/providers": "^5.6.5",
+    "@snapshot-labs/snapshot.js": "^0.3.77",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
