@@ -1,7 +1,7 @@
 import {Image, Button, Container} from 'react-bootstrap';
 import { createRoutesFromChildren, Link } from 'react-router-dom';
 import { InjectedConnector } from '@web3-react/injected-connector';
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import { useWeb3React } from '@web3-react/core';
 import hero from './images/game-bg.png';
@@ -42,7 +42,7 @@ function GameHome() {
                 <p>Create your Web 3.0 community within 2 minutes.</p>
                 {hasMetamask ? (
                     active ? (
-                        <Redirect to="/DigFighters"/>
+                        <Navigate to="/DIG/create-dao"/>
                     ) : (                
                         <Button variant="primary" size="lg" className="custom-button" onClick={() => connect()}>
                         Connect Metamask
