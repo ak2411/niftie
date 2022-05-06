@@ -42,7 +42,7 @@ function GameHome() {
                 <p>Create your Web 3.0 community within 2 minutes.</p>
                 {hasMetamask ? (
                     active ? (
-                        "connected!"
+                        <Redirect to="/DigFighters"/>
                     ) : (                
                         <Button variant="primary" size="lg" className="custom-button" onClick={() => connect()}>
                         Connect Metamask
