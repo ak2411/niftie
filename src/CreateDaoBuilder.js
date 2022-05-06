@@ -1,14 +1,15 @@
 import {Image, Button, Container, ProgressBar, Card} from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import hero from './images/game-bg.png';
 import './css/GameDashboard.css';
 import {useState} from 'react';
 
 
+
 function Success() {
     let navigate = useNavigate(); 
     const handleClick = () =>{ 
-        navigate(process.env.PUBLIC_URL + "/DIG/DigFighters")
+        navigate(process.env.PUBLIC_URL + "/DIG")
     }
     return(<div>
         <h2>You have created a DAO for DIG game!</h2>
@@ -17,7 +18,7 @@ function Success() {
     </div>);
 }
 
-function CreateDao() {
+function CreateDaoBuilder() {
     const [createdDAO, setCreatedDAO] = useState(false);
 
     return (
@@ -30,5 +31,5 @@ function CreateDao() {
     );
   }
   
-  export default CreateDao;
+  export default CreateDaoBuilder;
 

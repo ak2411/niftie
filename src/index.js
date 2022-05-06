@@ -18,7 +18,7 @@ root.render(
         <Routes>
       {/* <Route path="/message" exact element={<Message/>} /> */}
       {/* <Route path="/photos" exact element={<Photos/>} /> */}
-      <Route path="/" element={<App/>} />
+      <Route path="/dev/*" element={<App/>} />
       <Route path="/DIG/*" element={<GameIndex/>} >
       </Route>
     </Routes>
