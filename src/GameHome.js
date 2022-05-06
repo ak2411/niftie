@@ -9,12 +9,11 @@ import './css/GameHome.css';
 
 export const injected = new InjectedConnector();
 
-function GameHome() {
-    const [hasMetamask, setHasMetamask] = useState(false);
+function GameHome(pageProp) {
 
     useEffect(() => {
         if (typeof window.ethereum != "undefined") {
-            setHasMetamask(true);
+            pageProp.setHasMetamask(true);
         }
     });
     const {active,
@@ -28,7 +27,7 @@ function GameHome() {
         if (typeof window.ethereum != 'undefined') {
             try{
                 await activate(injected);
-                setHasMetamask(true);
+                pageProp.setHasMetamask(true);
             } catch (e) {
                 console.log(e);
             }
@@ -40,7 +39,7 @@ function GameHome() {
             <div className="game-hero-text-container">
                 <h2>Welcome to the DIG DAO builder!</h2>
                 <p>Create your Web 3.0 community within 2 minutes.</p>
-                {hasMetamask ? (
+                {pageProp.hasMetamask ? (
                     active ? (
                         <Navigate to="/DIG/create-dao"/>
                     ) : (                

@@ -10,19 +10,21 @@ import GameHome from './GameHome';
 import GameHeader from './GameHeader';
 import GameDashboard from './GameDashboard';
 import CreateDao from './CreateDao';
+import { useState, useEffect } from 'react';
 
 const getLibrary = (provider) => {
     return new Web3Provider(provider);
 }
 
-function GameIndex({pageProp}) {
+function GameIndex(pageProp) {
+    const [hasMetamask, setHasMetamask] = useState(false);
     return (
         <Web3ReactProvider getLibrary={getLibrary}>
         <GameHeader {...pageProp}/>
         <Routes>
             <Route path={`/DigFighters`} element={<GameDashboard {...pageProp}/>} />
-            <Route path={`/`} element={<GameHome {...pageProp}/>} />
-            <Route path={`/create-dao`} element={<CreateDao {...pageProp} />}/>
+            <Route path={`/`} element={<GameHome setHasMetamask = {setHasMetamask} hasMetamask = {hasMetamask} {...pageProp}/>} />
+            <Route path={`/create-dao`} element={<CreateDao hasMetamask = {hasMetamask} {...pageProp} />}/>
         </Routes>
         </Web3ReactProvider>
     );

@@ -10,7 +10,7 @@ import { ethers } from 'ethers';
 import { abi } from "./abi";
 
 
-function CreateDao() {
+function CreateDao(pageProp) {
   
     const {
       active,
@@ -22,8 +22,8 @@ function CreateDao() {
 
     async function execute() {
         if (active) {
-            const signer = provider.getSinger();
-            const contractAddress = "";
+            const signer = provider.getSigner();
+            const contractAddress = "0x5fbdb2315678afecb367f032d93f642f64180aa3";
             const contract = new ethers.Contract(contractAddress, abi, signer);
             try {
                 await contract.store(42);
@@ -37,7 +37,7 @@ function CreateDao() {
     
     return (
         <div className="game-dashboard">
-            {(this.state.hasMetamask && active) ? (
+            {(pageProp.hasMetamask && active) ? (
                 <Button variant="primary" size="lg" className="custom-button" onClick={() => execute()}>
                     Create DAO
                 </Button>
