@@ -25,7 +25,7 @@ function Success() {
 
 function CreateDao(pageProp) {
     const [createdDAO, setCreatedDAO] = useState(false);
-
+  
     const {
       active,
       activate,
@@ -117,3 +117,4 @@ function CreateDao(pageProp) {
   }
   
   export default CreateDao;
+
