@@ -9,6 +9,8 @@ import { Web3Provider } from '@ethersproject/providers';
 import GameHome from './GameHome';
 import GameHeader from './GameHeader';
 import GameDashboard from './GameDashboard';
+import GameDaoSelector from './GameDaoSelector';
+
 import CreateDao from './CreateDao';
 import { useState, useEffect } from 'react';
 
@@ -25,6 +27,7 @@ function GameIndex(pageProp) {
             <Route path={`/DigFighters`} element={<GameDashboard {...pageProp}/>} />
             <Route path={`/`} element={<GameHome setHasMetamask = {setHasMetamask} hasMetamask = {hasMetamask} {...pageProp}/>} />
             <Route path={`/create-dao`} element={<CreateDao hasMetamask = {hasMetamask} {...pageProp} />}/>
+            <Route path={`/home`} element={<GameDaoSelector hasMetamask = {hasMetamask} {...pageProp} />}/>
         </Routes>
         </Web3ReactProvider>
     );

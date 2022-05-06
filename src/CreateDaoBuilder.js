@@ -12,8 +12,8 @@ function Success() {
         navigate(process.env.PUBLIC_URL + "/DIG")
     }
     return(<div>
-        <h2>You have created a DAO for DIG game!</h2>
-        Click open to navigate to your DAO.
+        <h2>Your DAO builder is generated successfully!</h2>
+        Click open to navigate to your game's DAO builder.
         <Button className="custom-button" onClick={handleClick}>Open</Button>
     </div>);
 }
@@ -24,9 +24,12 @@ function CreateDaoBuilder() {
     return (
         <div className="game-dashboard">
             {createdDAO ? (<Success />) : 
-            (<Button variant="primary" size="lg" className="custom-button" onClick={()=> setCreatedDAO(true)}>
+            (
+            <Card>
+                <Card.Footer><Button variant="primary" size="lg" className="custom-button" onClick={()=> setCreatedDAO(true)}>
                Create DAO
-            </Button>)}
+            </Button></Card.Footer>
+            </Card>)}
         </div>
     );
   }
